@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //阿斯顿积分卡收到甲方
 }
 
 - (void)didReceiveMemoryWarning {

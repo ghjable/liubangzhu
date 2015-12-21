@@ -42,28 +42,28 @@
     _tabbarVc=[[UITabBarController alloc] init];
     _tabbarVc.delegate = self;
     XuanshangViewController *XuanVc=[[XuanshangViewController alloc] init];
-    XuanVc.view.backgroundColor=[UIColor whiteColor];
+    XuanVc.view.backgroundColor=bgcolor;
     UINavigationController *navXuan=[[UINavigationController alloc] initWithRootViewController:XuanVc];
     XuanVc.tabBarItem.title=@"悬赏";
     XuanVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     XuanVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     YihubaiyingViewController *YiVc=[[YihubaiyingViewController alloc] init];
-    YiVc.view.backgroundColor=[UIColor whiteColor];
+    YiVc.view.backgroundColor=bgcolor;
     UINavigationController *navYi=[[UINavigationController alloc] initWithRootViewController:YiVc];
     YiVc.tabBarItem.title=@"一呼百应";
     YiVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     YiVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     ZhongrenbangViewController *ZhongVc=[[ZhongrenbangViewController alloc] init];
-    ZhongVc.view.backgroundColor=[UIColor whiteColor];
+    ZhongVc.view.backgroundColor=bgcolor;
     UINavigationController *navZhong=[[UINavigationController alloc] initWithRootViewController:ZhongVc];
     ZhongVc.tabBarItem.title=@"众人帮";
     ZhongVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     ZhongVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     BangzhuzhanViewController *BangVc=[[BangzhuzhanViewController alloc] init];
-    BangVc.view.backgroundColor=[UIColor whiteColor];
+    BangVc.view.backgroundColor=bgcolor;
     UINavigationController *navBang=[[UINavigationController alloc] initWithRootViewController:BangVc];
     BangVc.tabBarItem.title=@"帮助站";
     BangVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

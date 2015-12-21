@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  liubangzhu
+//
+//  Created by able on 15/12/21.
+//  Copyright © 2015年 able. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#define color_boy [UIColor colorWithRed:70.0/255 green:202.0/255 blue:217.0/255 alpha:1]
+#define color_girl [UIColor colorWithRed:251.0/255 green:120.0/255 blue:112.0/255 alpha:1]
+#define color_tag1 [UIColor colorWithRed:254.0/255 green:190.0/255 blue:44.0/255 alpha:1]
+#define color_tag2 [UIColor colorWithRed:255.0/255 green:102.0/255 blue:102.0/255 alpha:1]
+#define color_tag3 [UIColor colorWithRed:255.0/255 green:153.0/255 blue:0.0/255 alpha:1]
+#define color_tag4 [UIColor colorWithRed:102.0/255 green:204.0/255 blue:204.0/255 alpha:1]
+#define color_tag5 [UIColor colorWithRed:102.0/255 green:153.0/255 blue:204.0/255 alpha:1]
+#define color_tag6 [UIColor colorWithRed:204.0/255 green:153.0/255 blue:102.0/255 alpha:1]
+#define color_tag7 [UIColor colorWithRed:255.0/255 green:102.0/255 blue:153.0/255 alpha:1]
+#define color_tag8 [UIColor colorWithRed:153.0/255 green:204.0/255 blue:153.0/255 alpha:1]

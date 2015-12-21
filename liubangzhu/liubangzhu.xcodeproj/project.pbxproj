@@ -15,6 +15,11 @@
 		C2CAE1671C26ED1B00D2BB45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CAE1651C26ED1B00D2BB45 /* LaunchScreen.storyboard */; };
 		C2CAE1721C26ED1B00D2BB45 /* liubangzhuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE1711C26ED1B00D2BB45 /* liubangzhuTests.m */; };
 		C2CAE17D1C26ED1B00D2BB45 /* liubangzhuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE17C1C26ED1B00D2BB45 /* liubangzhuUITests.m */; };
+		C2CAE1901C27AECC00D2BB45 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE18F1C27AECC00D2BB45 /* LoginViewController.m */; };
+		C2CAE1971C27AFFE00D2BB45 /* YihubaiyingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE1961C27AFFE00D2BB45 /* YihubaiyingViewController.m */; };
+		C2CAE19A1C27B01400D2BB45 /* BangzhuzhanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE1991C27B01400D2BB45 /* BangzhuzhanViewController.m */; };
+		C2CAE19D1C27B01F00D2BB45 /* ZhongrenbangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE19C1C27B01F00D2BB45 /* ZhongrenbangViewController.m */; };
+		C2CAE1A01C27B03300D2BB45 /* XuanshangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE19F1C27B03300D2BB45 /* XuanshangViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,17 @@
 		C2CAE1781C26ED1B00D2BB45 /* liubangzhuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = liubangzhuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CAE17C1C26ED1B00D2BB45 /* liubangzhuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = liubangzhuUITests.m; sourceTree = "<group>"; };
 		C2CAE17E1C26ED1B00D2BB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CAE18E1C27AECC00D2BB45 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C2CAE18F1C27AECC00D2BB45 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C2CAE1951C27AFFE00D2BB45 /* YihubaiyingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YihubaiyingViewController.h; sourceTree = "<group>"; };
+		C2CAE1961C27AFFE00D2BB45 /* YihubaiyingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YihubaiyingViewController.m; sourceTree = "<group>"; };
+		C2CAE1981C27B01400D2BB45 /* BangzhuzhanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BangzhuzhanViewController.h; sourceTree = "<group>"; };
+		C2CAE1991C27B01400D2BB45 /* BangzhuzhanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BangzhuzhanViewController.m; sourceTree = "<group>"; };
+		C2CAE19B1C27B01F00D2BB45 /* ZhongrenbangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhongrenbangViewController.h; sourceTree = "<group>"; };
+		C2CAE19C1C27B01F00D2BB45 /* ZhongrenbangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhongrenbangViewController.m; sourceTree = "<group>"; };
+		C2CAE19E1C27B03300D2BB45 /* XuanshangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XuanshangViewController.h; sourceTree = "<group>"; };
+		C2CAE19F1C27B03300D2BB45 /* XuanshangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XuanshangViewController.m; sourceTree = "<group>"; };
+		C2CAE1A11C27D39700D2BB45 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,11 @@
 		C2CAE1561C26ED1B00D2BB45 /* liubangzhu */ = {
 			isa = PBXGroup;
 			children = (
+				C2CAE1941C27AFCB00D2BB45 /* 众人帮 */,
+				C2CAE18D1C27ADAB00D2BB45 /* 帮主站 */,
+				C2CAE18C1C27ADA300D2BB45 /* 一呼百应 */,
+				C2CAE18B1C27AD7B00D2BB45 /* 悬赏 */,
+				C2CAE18A1C27AD6F00D2BB45 /* 注册登入 */,
 				C2CAE15A1C26ED1B00D2BB45 /* AppDelegate.h */,
 				C2CAE15B1C26ED1B00D2BB45 /* AppDelegate.m */,
 				C2CAE15D1C26ED1B00D2BB45 /* ViewController.h */,
@@ -127,6 +148,7 @@
 			children = (
 				C2CAE1711C26ED1B00D2BB45 /* liubangzhuTests.m */,
 				C2CAE1731C26ED1B00D2BB45 /* Info.plist */,
+				C2CAE1A11C27D39700D2BB45 /* PrefixHeader.pch */,
 			);
 			path = liubangzhuTests;
 			sourceTree = "<group>";
@@ -138,6 +160,51 @@
 				C2CAE17E1C26ED1B00D2BB45 /* Info.plist */,
 			);
 			path = liubangzhuUITests;
+			sourceTree = "<group>";
+		};
+		C2CAE18A1C27AD6F00D2BB45 /* 注册登入 */ = {
+			isa = PBXGroup;
+			children = (
+				C2CAE18E1C27AECC00D2BB45 /* LoginViewController.h */,
+				C2CAE18F1C27AECC00D2BB45 /* LoginViewController.m */,
+			);
+			name = "注册登入";
+			sourceTree = "<group>";
+		};
+		C2CAE18B1C27AD7B00D2BB45 /* 悬赏 */ = {
+			isa = PBXGroup;
+			children = (
+				C2CAE19E1C27B03300D2BB45 /* XuanshangViewController.h */,
+				C2CAE19F1C27B03300D2BB45 /* XuanshangViewController.m */,
+			);
+			name = "悬赏";
+			sourceTree = "<group>";
+		};
+		C2CAE18C1C27ADA300D2BB45 /* 一呼百应 */ = {
+			isa = PBXGroup;
+			children = (
+				C2CAE1951C27AFFE00D2BB45 /* YihubaiyingViewController.h */,
+				C2CAE1961C27AFFE00D2BB45 /* YihubaiyingViewController.m */,
+			);
+			name = "一呼百应";
+			sourceTree = "<group>";
+		};
+		C2CAE18D1C27ADAB00D2BB45 /* 帮主站 */ = {
+			isa = PBXGroup;
+			children = (
+				C2CAE1981C27B01400D2BB45 /* BangzhuzhanViewController.h */,
+				C2CAE1991C27B01400D2BB45 /* BangzhuzhanViewController.m */,
+			);
+			name = "帮主站";
+			sourceTree = "<group>";
+		};
+		C2CAE1941C27AFCB00D2BB45 /* 众人帮 */ = {
+			isa = PBXGroup;
+			children = (
+				C2CAE19B1C27B01F00D2BB45 /* ZhongrenbangViewController.h */,
+				C2CAE19C1C27B01F00D2BB45 /* ZhongrenbangViewController.m */,
+			);
+			name = "众人帮";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CAE1A01C27B03300D2BB45 /* XuanshangViewController.m in Sources */,
+				C2CAE1901C27AECC00D2BB45 /* LoginViewController.m in Sources */,
+				C2CAE19D1C27B01F00D2BB45 /* ZhongrenbangViewController.m in Sources */,
+				C2CAE1971C27AFFE00D2BB45 /* YihubaiyingViewController.m in Sources */,
 				C2CAE15F1C26ED1B00D2BB45 /* ViewController.m in Sources */,
+				C2CAE19A1C27B01400D2BB45 /* BangzhuzhanViewController.m in Sources */,
 				C2CAE15C1C26ED1B00D2BB45 /* AppDelegate.m in Sources */,
 				C2CAE1591C26ED1B00D2BB45 /* main.m in Sources */,
 			);
@@ -496,6 +568,7 @@
 				C2CAE1831C26ED1B00D2BB45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2CAE1841C26ED1B00D2BB45 /* Build configuration list for PBXNativeTarget "liubangzhuTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +577,7 @@
 				C2CAE1861C26ED1B00D2BB45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2CAE1871C26ED1B00D2BB45 /* Build configuration list for PBXNativeTarget "liubangzhuUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +586,7 @@
 				C2CAE1891C26ED1B00D2BB45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

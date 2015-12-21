@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "XuanshangViewController.h"
+#import "YihubaiyingViewController.h"
+#import "ZhongrenbangViewController.h"
+#import "BangzhuzhanViewController.h"
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
-@interface AppDelegate ()
 
 @end
 
@@ -16,8 +21,59 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UIWindow *window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    LoginViewController *loginVC=[[LoginViewController alloc] init];
+    UINavigationController *loginNV=[[UINavigationController alloc] initWithRootViewController:loginVC];
+    loginNV.navigationBar.hidden=YES;
+    window.rootViewController=loginNV;
+    
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent ];
+    
+    
+    [window makeKeyAndVisible];
+    self.window=window;
+    return YES;
+
     // Override point for customization after application launch.
     return YES;
+}
+-(void)getRootViewController
+{
+    _tabbarVc=[[UITabBarController alloc] init];
+    _tabbarVc.delegate = self;
+    XuanshangViewController *XuanVc=[[XuanshangViewController alloc] init];
+    XuanVc.view.backgroundColor=[UIColor whiteColor];
+    UINavigationController *navXuan=[[UINavigationController alloc] initWithRootViewController:XuanVc];
+    XuanVc.tabBarItem.title=@"悬赏";
+    XuanVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    XuanVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    YihubaiyingViewController *YiVc=[[YihubaiyingViewController alloc] init];
+    YiVc.view.backgroundColor=[UIColor whiteColor];
+    UINavigationController *navYi=[[UINavigationController alloc] initWithRootViewController:YiVc];
+    YiVc.tabBarItem.title=@"一呼百应";
+    YiVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    YiVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    ZhongrenbangViewController *ZhongVc=[[ZhongrenbangViewController alloc] init];
+    ZhongVc.view.backgroundColor=[UIColor whiteColor];
+    UINavigationController *navZhong=[[UINavigationController alloc] initWithRootViewController:ZhongVc];
+    ZhongVc.tabBarItem.title=@"众人帮";
+    ZhongVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    ZhongVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    BangzhuzhanViewController *BangVc=[[BangzhuzhanViewController alloc] init];
+    BangVc.view.backgroundColor=[UIColor whiteColor];
+    UINavigationController *navBang=[[UINavigationController alloc] initWithRootViewController:BangVc];
+    BangVc.tabBarItem.title=@"帮助站";
+    BangVc.tabBarItem.image=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    BangVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    _tabbarVc.viewControllers=@[navXuan,navYi,navZhong,navBang];
+    _tabbarVc.tabBar.tintColor=[UIColor redColor];
+    
+    self.window.rootViewController = _tabbarVc;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

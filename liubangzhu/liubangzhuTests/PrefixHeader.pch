@@ -24,3 +24,10 @@
 #define color_tag6 [UIColor colorWithRed:204.0/255 green:153.0/255 blue:102.0/255 alpha:1]
 #define color_tag7 [UIColor colorWithRed:255.0/255 green:102.0/255 blue:153.0/255 alpha:1]
 #define color_tag8 [UIColor colorWithRed:153.0/255 green:204.0/255 blue:153.0/255 alpha:1]
+#define maincolor [UIColor colorWithRed:254.0/255 green:190.0/255 blue:44.0/255 alpha:1]
+#define bgcolor [UIColor colorWithRed:245.0/255 green:245.0/255 blue:245.0/255 alpha:1]
+#define color_line1 [UIColor colorWithRed:102.0/255 green:102.0/255 blue:102.0/255 alpha:1]
+#define color_line2 [UIColor colorWithRed:174.0/255 green:174.0/255 blue:174.0/255 alpha:1]
+#define color_txt1 [UIColor colorWithRed:68.0/255 green:68.0/255 blue:68.0/255 alpha:1]
+
+

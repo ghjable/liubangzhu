@@ -29,5 +29,3 @@
 #define color_line1 [UIColor colorWithRed:102.0/255 green:102.0/255 blue:102.0/255 alpha:1]
 #define color_line2 [UIColor colorWithRed:174.0/255 green:174.0/255 blue:174.0/255 alpha:1]
 #define color_txt1 [UIColor colorWithRed:68.0/255 green:68.0/255 blue:68.0/255 alpha:1]
-
-

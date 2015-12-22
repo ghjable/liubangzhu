@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< Updated upstream
 		B11913031C29034E00C1215B /* HeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B11913021C29034E00C1215B /* HeaderCell.m */; };
 		B1D014061C28E8D4008E71D2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B1D013F01C28E8D4008E71D2 /* LICENSE */; };
 		B1D014071C28E8D4008E71D2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B1D013F11C28E8D4008E71D2 /* README.md */; };
@@ -19,10 +18,8 @@
 		B1D0140D1C28E8D4008E71D2 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D014011C28E8D4008E71D2 /* SDCollectionViewCell.m */; };
 		B1D0140E1C28E8D4008E71D2 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D014031C28E8D4008E71D2 /* SDCycleScrollView.m */; };
 		B1D0140F1C28E8D4008E71D2 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D014051C28E8D4008E71D2 /* UIView+SDExtension.m */; };
-=======
 		C2B8E69C1C28FA1F00168007 /* XuanShangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B8E69B1C28FA1F00168007 /* XuanShangTableViewCell.m */; };
 		C2B8E69F1C28FA3F00168007 /* XuanShangMode.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B8E69E1C28FA3F00168007 /* XuanShangMode.m */; };
->>>>>>> Stashed changes
 		C2CAE1591C26ED1B00D2BB45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE1581C26ED1B00D2BB45 /* main.m */; };
 		C2CAE15C1C26ED1B00D2BB45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAE15B1C26ED1B00D2BB45 /* AppDelegate.m */; };
 		C2CAE1621C26ED1B00D2BB45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CAE1601C26ED1B00D2BB45 /* Main.storyboard */; };
@@ -93,7 +90,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< Updated upstream
 		B11913011C29034E00C1215B /* HeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCell.h; sourceTree = "<group>"; };
 		B11913021C29034E00C1215B /* HeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCell.m; sourceTree = "<group>"; };
 		B1D013F01C28E8D4008E71D2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -114,12 +110,10 @@
 		B1D014031C28E8D4008E71D2 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		B1D014041C28E8D4008E71D2 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		B1D014051C28E8D4008E71D2 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
-=======
 		C2B8E69A1C28FA1F00168007 /* XuanShangTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XuanShangTableViewCell.h; sourceTree = "<group>"; };
 		C2B8E69B1C28FA1F00168007 /* XuanShangTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XuanShangTableViewCell.m; sourceTree = "<group>"; };
 		C2B8E69D1C28FA3F00168007 /* XuanShangMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XuanShangMode.h; sourceTree = "<group>"; };
 		C2B8E69E1C28FA3F00168007 /* XuanShangMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XuanShangMode.m; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 		C2CAE1541C26ED1B00D2BB45 /* liubangzhu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = liubangzhu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CAE1581C26ED1B00D2BB45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2CAE15A1C26ED1B00D2BB45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };

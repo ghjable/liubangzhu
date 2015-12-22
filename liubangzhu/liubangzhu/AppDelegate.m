@@ -70,7 +70,7 @@
     BangVc.tabBarItem.selectedImage=[[UIImage imageNamed:@"icon30-30"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     _tabbarVc.viewControllers=@[navXuan,navYi,navZhong,navBang];
-    _tabbarVc.tabBar.tintColor=[UIColor redColor];
+    _tabbarVc.tabBar.tintColor=maincolor;
     
     self.window.rootViewController = _tabbarVc;
 

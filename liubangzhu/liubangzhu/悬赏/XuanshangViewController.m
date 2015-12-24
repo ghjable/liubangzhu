@@ -8,7 +8,10 @@
 
 #import "XuanshangViewController.h"
 #import "XuanShangTableViewCell.h"
-@interface XuanshangViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+#import "PublishViewController.h"
+#import "XuanshangDetilViewController.h"
+#import "SDCycleScrollView.h"
+@interface XuanshangViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 {
     UIScrollView *_scrollView1;
 
@@ -17,6 +20,7 @@
 @property(nonatomic,copy) NSString *Str2;
 @property(nonatomic,copy) NSString *Str3;
 @property(nonatomic,strong) UITableView *myTableView;
+@property(nonatomic,strong) UILabel *underline;
 
 
 @end
@@ -36,66 +40,18 @@
 }
 -(void)setTableView
 {
-    _scrollView1 = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 120)];
-    _scrollView1.showsHorizontalScrollIndicator=NO;
-    _scrollView1.showsVerticalScrollIndicator=NO;
-    _scrollView1.bounces=NO;
-    [self.view addSubview:_scrollView1];
-    _Str1=@"img355-160";
-    _Str2=@"img355-210";
-    _Str3=@"img375-120";
-    NSArray *array=[NSArray arrayWithObjects:_Str3,_Str1,_Str2,_Str3,_Str1, nil];
-    
-    // 添加图片
-    for (int i=0; i<array.count; i++) {
-        UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width*i, 0, [UIScreen mainScreen].bounds.size.width, 120)];
-        //        [imageView sd_setImageWithURL:[NSURL URLWithString:array[i]]];
-        imageView.image=[UIImage imageNamed:array[i]];
-        [_scrollView1 addSubview:imageView];
-        //        imageView.tag=i+10;
-        //        imageView.userInteractionEnabled=YES;
-        //        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
-        //        tap.numberOfTapsRequired=1;
-        //        tap.numberOfTouchesRequired=1;
-        //        [imageView addGestureRecognizer:tap];
-        
-        
-    }
-    _scrollView1.contentOffset = CGPointMake( [UIScreen mainScreen].bounds.size.width, 0);
-    //tag
-    _scrollView1.tag = 2000;
-    _scrollView1.contentSize = CGSizeMake( [UIScreen mainScreen].bounds.size.width * array.count, 0);
-    _scrollView1.pagingEnabled = YES;
-    _scrollView1.delegate = self;
-    [self.view addSubview:_scrollView1];
-    //UIPageControl
-    //实例化
-    UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-300)/2, 160, 300, 24)];
-    
-    //    pageControl.backgroundColor = [UIColor purpleColor];
-    //设置点点的个数
-    pageControl.numberOfPages = array.count-2;
-    //设置默认第几个点
-    pageControl.currentPage = 0;
-    //设置选中前点点的颜色
-    pageControl.pageIndicatorTintColor = [UIColor whiteColor];
-    //设置选中后点点的颜色
-    pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
-    //事件
-    [pageControl addTarget:self action:@selector(pageControl:) forControlEvents:UIControlEventValueChanged];
-    
-    //tag
-    pageControl.tag = 1000;
-    _scrollView1.pagingEnabled=YES;
-    [self.view addSubview:pageControl];
-    //定时器
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
-    
+    SDCycleScrollView *scr=[SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, KScreenWith, 120) imagesGroup:nil];
+    scr.pageControlAliment=SDCycleScrollViewPageContolAlimentRight;
+    scr.delegate=self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        scr.titlesGroup=nil;
+        scr.localizationImagesGroup=@[[UIImage imageNamed:@"img355-160"],[UIImage imageNamed:@"img355-160"],[UIImage imageNamed:@"img375-120"]];
+    });
     _myTableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 64, KScreenWith, KScreenHeigh-64-49) style:UITableViewStylePlain];
     _myTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     _myTableView.delegate=self;
     _myTableView.dataSource=self;
-    _myTableView.tableHeaderView=_scrollView1;
+    _myTableView.tableHeaderView=scr;
     [self.view addSubview:_myTableView];
 }
 -(void)setNav
@@ -133,12 +89,18 @@
 }
 -(void)rightBtnClick
 {
-    NSLog(@"right");
+    PublishViewController *vc=[[PublishViewController alloc] init];
+    vc.view.backgroundColor=bgcolor;
+    vc.hidesBottomBarWhenPushed=YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
 -(void)BtnClick:(UIButton *)btn
 {
+    [UIView animateWithDuration:0.5 animations:^{
+        _underline.frame=CGRectMake(82*btn.tag, 35, 82, 5);
+    }];
     
 }
 #pragma mark - pageControl的方法
@@ -177,6 +139,7 @@
     scr.showsHorizontalScrollIndicator=NO;
     [self.view addSubview:scr];
     UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 656, 40)];
+    view.userInteractionEnabled=YES;
     view.backgroundColor=[UIColor whiteColor];
     [scr addSubview:view];
     view.layer.borderWidth=1;
@@ -188,12 +151,16 @@
     }
     for (int i=0; i<8; i++) {
         UIButton *btn=[[UIButton alloc] initWithFrame:CGRectMake(82*i, 0, 82, 40)];
-        btn.tag=i+1;
+        btn.tag=i;
         [btn addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [btn setTitle:@"hao" forState:UIControlStateNormal];
         [btn setTitleColor:color_line1 forState:UIControlStateNormal];
+        [btn setTitleColor:color_line2 forState:UIControlStateHighlighted];
         [view addSubview:btn];
     }
+    _underline=[[UILabel alloc] initWithFrame:CGRectMake(0, 35, 82, 5)];
+    _underline.backgroundColor=maincolor;
+    [view addSubview:_underline];
     return scr;
 
 }
@@ -236,5 +203,21 @@
     cell.backgroundColor=bgcolor;
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_myTableView deselectRowAtIndexPath:indexPath animated:NO];
+    if (indexPath.row==1) {
+        XuanshangDetilViewController *Vc=[[XuanshangDetilViewController alloc] initWithActDetilType:@"1"];
+        Vc.view.backgroundColor=bgcolor;
+        Vc.hidesBottomBarWhenPushed=YES;
+        [self.navigationController pushViewController:Vc animated:YES];
 
+    }else{
+        XuanshangDetilViewController *Vc=[[XuanshangDetilViewController alloc] initWithActDetilType:@"0"];
+        Vc.view.backgroundColor=bgcolor;
+        Vc.hidesBottomBarWhenPushed=YES;
+        [self.navigationController pushViewController:Vc animated:YES];
+
+    }
+}
 @end
